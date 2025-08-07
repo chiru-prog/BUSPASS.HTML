@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TSRTC Bus Pass Application</title>
+</head>
+<body>
+    <div style="border: 1px solid; padding: 20px #ccc; background-color: aqua; border-radius: 20px; width:100%">
+        <center>
+        <img src="logo.jpg" alt="logo" width="50px" >
+        <h1>TELANGANA STATE ROAD TRANSPORT CORPORATION</h1>
+        <h3>GENERAL BUS PASS APPILICATION</h3>
+        </center> 
+    </div>
+    <hr>
+    <form action="./form.html">
+        <fieldset>
+            <legend>Application details</legend>
+            <table width="80%">
+                <tbody>
+                    <tr>
+                        <td>
+                            <lable for="name">
+                                Full Name: <span style="color: red">*</span>
+                            </lable>
+                            &nbsp;&nbsp;
+                            <input type="text" required maxlength="20" id="name">
+                        </td>
+                        <td>
+                            <label for="Father Name">
+                                Father's Name:
+                                <span style="color: red">*</span>
+                            </label>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="text" required  maxlength="20" id="Father Name">
+                        </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label for="date">
+                          Date:
+                          <span style="color:red">*</span>
+                        </label>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="date" required id="date">
+                      </td>
+                      <td>
+                        <label for="gender">
+                          gender:
+                          <span style="color:red">*</span>
+                        </label>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">female</label>
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="men">men</label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label for="num">
+                          Whatapp No:
+                          <span style="color:red">*</span>
+                        </label>
+                        &nbsp;
+                        <input type="text" required id="num" maxlength="10" pattern="\[6-9][0-9]{9}">
+                      </td>
+                      <td>
+                        <label for="num">
+                          Aadhaar No:
+                          <span style="color:red">*</span>
+                        </label>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="text" required id="num" maxlength="12">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label for="photo">
+                          Photo:
+                          <span style="color:red">*</span>
+                        </label>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="file" required id="photo" accept=".jpg,.png,jpeg" multiple>
+                      </td>
+                      <td>
+                        <label for="email">
+                          Email:
+                          <span style="color:red">*</span>
+                          &nbsp;&nbsp;&nbsp;&nbsp;
+                          <input type="email" required maxlength="20" id="email">
+                        </label>
+                      </td>
+                    </tr>
+                </tbody>
+            </table>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend>Residential Address Details</legend>
+          <table width="70%">
+            <tbody>
+              <tr>
+                <td>
+                  <label for="area">
+                    Applicant's Address:
+                    <span style="color:red">*</span>
+                  </label>
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <textarea name="area" id="area" row="3" cols="20" spellcheck required></textarea>
+                </td>
+                <td>
+                  <label for="details">
+                    Details:
+                    <span style="color:red">*</span>
+                  </label>
+                  <select name="details" id="details">
+                    <option>Hyderabad</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="mandal">
+                    Mandal:
+                    <span style="color:red">*</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  </label>   
+                  <select name="mandal" id="mandal">
+                    <option>Hyderabad</option>
+                  </select>             
+                </td>
+                <td>
+                  <label for="village">
+                    Village:
+                    <span style="color:red">*</span>
+                  </label>
+                  <select name="village" id="village">
+                    <option>Hyderabad</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="pin">
+                    "Pincode:
+                    <span style="color:red">*</span>
+                  </label>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <input type="text" required id="pin" maxlength="6" pattern="5[0-9]{6}\">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend>Pass Type Details</legend>
+          <table width="70%">
+            <tbody>
+              <tr>
+                <td>
+                  <label for="city">
+                  City:
+                  <span style="color:red">*</span>
+                  </label>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <select name="city" id="city">
+                    <option>Hyderabad</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="pass">
+                    Pass Type:
+                    <span style="color:red">*</span>
+                  </label>
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <select name="pass" id="pass">
+                    <option value>-----Select-----</option>
+                    <option>GREATER PASS</option>
+                    <option>GENRAL ORDINARY ROUTE PASS MTLY</option>
+                    <option>GENRAL METRO EXPRESS ROUTE PASS MTLY</option>
+                    <option>ORDINARY PASS</option>
+                    <option>METRO EXPRESS PASS</option>
+                    <option>METRO DELUXE PASS</option>
+                  </select>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend> Mode Of Payment & Pass Collection</legend>
+          <table width="70%">
+            <tbody>
+              <tr>
+                <td>
+                  <label for="payment">
+                    Payment Mode:
+                    <span style="color: red;">*</span>
+                  </label>
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <select name="payment" id="payment">
+                    <option value>Select Payment Mode</option>
+                    <option>Payment at counter</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="delivery">
+                    Payment Mode
+                    <span style="color: red;">*</span>
+                  </label>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <select name="delivery" id="delivery">
+                    <option value>Select Pass Delivery Mode</option>
+                    <option>At Counter</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="collect">
+                    Center Which you Want Collect Pass
+                    <span style="color: red;">*</span>
+                  </label>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <select name="collect" id="delivery">
+                    <option value="collect">-----select-----</option>
+                    <option>RTC ABIDS--HYD[25/06/25]</option>
+                    <option>RTC AIRPORT--HYD[25/06/25]</option>
+                    <option>RTC BALA NAGAR--HYD[25/06/25]</option>
+                    <option>RTC DILSUKHNAGAR--HYD[25/06/25]</option>
+                    <option>RTC CHARMINAR--HYD[25/06/25]</option>
+                  </select>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </fieldset>
+        <center>
+          <img src="https://user-images.githubusercontent.com/25476729/63083566-a8bc6880-bf66-11e9-82cc-9609c2fd8929.png" width="100">
+          <br>
+          <input type pattern="\[a-z][0-9]{10}">
+          <br>
+          <br>
+          <input type="submit">
+          <!-- <button class="g-recaptcha" 
+        data-sitekey="reCAPTCHA_site_key" 
+        data-callback='onSubmit' 
+        data-action='submit'>Submit</button> -->
+        </center>
+    </form>
+</body>
+</html>
